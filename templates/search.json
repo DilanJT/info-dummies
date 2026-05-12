@@ -15,8 +15,8 @@
           "type": "_heading",
           "static": true,
           "settings": {
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
+            "type_preset": "h1",
+            "font": "",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -49,8 +49,8 @@
       "settings": {
         "alignment": "flex-start",
         "color_scheme": "scheme-1",
-        "padding-block-start": 40,
-        "padding-block-end": 0
+        "padding-block-start": 80,
+        "padding-block-end": 24
       }
     },
     "main": {
@@ -179,8 +179,8 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0,
         "color_scheme": "scheme-1",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 32,
+        "padding-block-end": 96
       }
     }
   },

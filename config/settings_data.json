@@ -155,7 +155,7 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#eef1ea",
+          "background": "#ebebeb",
           "foreground_heading": "#000000",
           "foreground": "#000000cf",
           "primary": "#000000cf",
@@ -194,16 +194,16 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#e1edf5",
+          "background": "#dedede",
           "foreground_heading": "#000000",
           "foreground": "#000000cf",
           "primary": "#000000cf",
           "primary_hover": "#000000",
-          "border": "#1d368680",
+          "border": "#00000080",
           "shadow": "#000000",
           "primary_button_background": "#000000",
           "primary_button_text": "#ffffff",
-          "primary_button_border": "#1d3686",
+          "primary_button_border": "#000000",
           "primary_button_hover_background": "#333333",
           "primary_button_hover_text": "#ffffff",
           "primary_button_hover_border": "#000000",
@@ -435,7 +435,7 @@
         },
         "scheme-3": {
           "settings": {
-            "background": "#eef1ea",
+            "background": "#ebebeb",
             "foreground_heading": "#000000",
             "foreground": "#000000cf",
             "primary": "#000000cf",
@@ -474,16 +474,16 @@
         },
         "scheme-4": {
           "settings": {
-            "background": "#e1edf5",
+            "background": "#dedede",
             "foreground_heading": "#000000",
             "foreground": "#000000cf",
             "primary": "#000000cf",
             "primary_hover": "#000000",
-            "border": "#1d368680",
+            "border": "#00000080",
             "shadow": "#000000",
             "primary_button_background": "#000000",
             "primary_button_text": "#ffffff",
-            "primary_button_border": "#1d3686",
+            "primary_button_border": "#000000",
             "primary_button_hover_background": "#333333",
             "primary_button_hover_text": "#ffffff",
             "primary_button_hover_border": "#000000",

@@ -15,12 +15,12 @@
           "type": "_cart-title",
           "static": true,
           "settings": {
-            "title": "Cart",
+            "title": "Your cart",
             "show_count": true,
-            "type_preset": "h4",
+            "type_preset": "h2",
             "alignment": "left",
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 24,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -59,8 +59,8 @@
       "settings": {
         "section_width": "page-width",
         "color_scheme": "",
-        "padding-block-start": 24,
-        "padding-block-end": 0
+        "padding-block-start": 64,
+        "padding-block-end": 32
       }
     },
     "product_list_NNFgcy": {

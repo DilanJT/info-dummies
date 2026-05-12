@@ -15,12 +15,12 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>Page not found</h1>",
+            "text": "<h1>404</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h3",
-            "font": "var(--font-primary--family)",
+            "type_preset": "h1",
+            "font": "",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -41,12 +41,12 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<h3>This page couldn't be found.</h3><p>The link may be broken or the page may have been moved.</p>",
             "width": "100%",
-            "max_width": "normal",
+            "max_width": "narrow",
             "alignment": "center",
             "type_preset": "rte",
-            "font": "var(--font-primary--family)",
+            "font": "",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -93,7 +93,7 @@
         "gap": 20,
         "color_scheme": "",
         "padding-block-start": 100,
-        "padding-block-end": 100
+        "padding-block-end": 80
       }
     },
     "product_list_iA96Tq": {
@@ -136,12 +136,12 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Discover something new</p>",
+                "text": "<h3>Try one of these instead</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-primary--family)",
+                "type_preset": "h3",
+                "font": "",
                 "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
