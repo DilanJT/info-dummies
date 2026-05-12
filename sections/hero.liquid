@@ -450,6 +450,14 @@
   {% endif %}
 {% endcapture %}
 
+{% if section.settings.enable_parallax and has_only_video == false %}
+  <script
+    src="{{ 'hero-parallax.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+{% endif %}
+
 <div
   id="Hero-{{ section.id }}"
   class="hero color-{{ section.settings.color_scheme }}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}"
@@ -458,6 +466,7 @@
     --hero-border-width: {{ section.settings.border_width }}px;
     --hero-border-opacity: {{ section.settings.border_opacity }}%;
     --blur-opacity: {{ section.settings.reflection_opacity | divided_by: 100.0 }};
+    --hero-parallax-overscan: {{ section.settings.parallax_intensity | default: 60 }}px;
     {% if section.settings.section_height == 'custom' %}
       --hero-min-height: {{ section.settings.section_height_custom }}svh;
     {% elsif section.settings.section_height == "full-screen" %}
@@ -471,6 +480,10 @@
   {% endif %}
   {% if section.settings.blurred_reflection and has_only_video == false or has_only_video_mobile == false %}
     data-blur-shadow="true"
+  {% endif %}
+  {% if section.settings.enable_parallax and has_only_video == false %}
+    data-parallax="true"
+    data-parallax-range="{{ section.settings.parallax_intensity | default: 60 | times: 2 }}"
   {% endif %}
 >
   {% if section.settings.blurred_reflection %}
@@ -594,6 +607,20 @@
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: repeat(var(--hero-media-count, 1), 1fr);
+  }
+
+  .hero[data-parallax='true'] .hero__media-grid {
+    height: calc(100% + var(--hero-parallax-overscan, 60px) * 2);
+    top: calc(var(--hero-parallax-overscan, 60px) * -1);
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero[data-parallax='true'] .hero__media-grid {
+      height: 100%;
+      top: 0;
+      transform: none !important;
+    }
   }
 
   .hero--auto .hero__media {
@@ -1214,6 +1241,24 @@
       "unit": "%",
       "default": 75,
       "visible_if": "{{ section.settings.blurred_reflection and section.settings.media_type_1 != 'video' or section.settings.media_type_2 != 'video' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax",
+      "label": "Enable parallax scroll",
+      "info": "Image media slowly drifts as the viewer scrolls. Honors reduced-motion preferences.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "parallax_intensity",
+      "label": "Parallax intensity",
+      "min": 20,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "default": 60,
+      "visible_if": "{{ section.settings.enable_parallax }}"
     },
     {
       "type": "header",

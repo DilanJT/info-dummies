@@ -84,6 +84,8 @@
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
+        "enable_parallax": true,
+        "parallax_intensity": 80,
         "padding-block-start": 100,
         "padding-block-end": 72
       }
